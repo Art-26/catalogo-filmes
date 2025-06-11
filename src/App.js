@@ -8,6 +8,7 @@ import Logo from './components/Logo';
 import Cabecalho from './components/Cabecalho';
 import CarregadorFonte from './components/CarregadorFonte';
 import { ProvedorUsuario } from './contexts/UsuarioContexto';
+import Catalogo from './paginas/Catalogo';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -48,6 +49,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/calendario" element={<Calendario />} />
+          <Route path="/catalogo" element={<Catalogo />} />
+          <Route path="/catalogo/:id" element={<DetalheFilme />} />
         </Routes>
       </Router>
     </ProvedorUsuario>
