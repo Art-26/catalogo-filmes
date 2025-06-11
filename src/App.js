@@ -4,9 +4,9 @@ import { createGlobalStyle } from 'styled-components';
 import Login from './paginas/Login';
 import Calendario from './paginas/Calendario';
 import DetalheFilme from './paginas/DetalheFilme';
-import Logo from './componentes/Logo';
-import Cabecalho from './componentes/Cabecalho';
-import CarregadorFonte from './componentes/CarregadorFonte';
+import Logo from './components/Logo';
+import Cabecalho from './components/Cabecalho';
+import CarregadorFonte from './components/CarregadorFonte';
 import { ProvedorUsuario } from './contexts/UsuarioContexto';
 
 const GlobalStyle = createGlobalStyle`

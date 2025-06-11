@@ -55,3 +55,5 @@ const dadosFuturos = [
         poster: 'https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/cd5df8d5-ab52-11ef-aa79-9bebc91072b3/lilo-stitch-live-action+(1).jpeg',
     },
 ]
+
+export default Calendario;
