@@ -73,11 +73,8 @@ const Cabecalho = () => {
           <BotaoSair onClick={aoSair}>Sair</BotaoSair>
         </InformacaoUsuario>
       )}
-      <LinkNavegacao to="/catalogo?tipo=filme" className={localizacao.pathname === '/catalogo' && new URLSearchParams(localizacao.search).get('tipo') === 'filme' ? 'ativo' : ''}>
-        Filmes
-      </LinkNavegacao>
-      <LinkNavegacao to="/catalogo?tipo=série" className={localizacao.pathname === '/catalogo' && new URLSearchParams(localizacao.search).get('tipo') === 'série' ? 'ativo' : ''}>
-        Séries
+      <LinkNavegacao to="/catalogo" className={localizacao.pathname === '/catalogo' ? 'ativo' : ''}>
+        Filmes e Séries
       </LinkNavegacao>
       <LinkNavegacao to="/calendario" className={localizacao.pathname === '/calendario' ? 'ativo' : ''}>
         Calendário
