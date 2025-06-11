@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'styled-components';
 import styled from 'styled-components';
 
-const Conteiner = styled.main`
+const Container = styled.main`
     max-width: 900px;
     margin: 2rem auto;
     padding: 1rem;
@@ -33,12 +33,12 @@ const ItemLista = styled.li`
 `;
 
 const TituloFilme = styled.h2`
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.5rem 0;
 `;
 
 const DataLancamento = styled.p`
     font-weight: bold;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.5rem 0;
 `;
 
 const Descricao = styled.p`
@@ -49,23 +49,23 @@ const Descricao = styled.p`
 const dadosFuturos = [
     {
         id: 1,
-        Titulo: 'Lilo & Stitch',
-        DataLancamento: 'sem data',
-        Descricao: 'Filme Lilo & Stitch',
+        titulo: 'Lilo & Stitch',
+        dataLancamento: '2000-10-20',
+        descricao: 'Filme Lilo & Stitch',
         poster: 'https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/cd5df8d5-ab52-11ef-aa79-9bebc91072b3/lilo-stitch-live-action+(1).jpeg',
     },
     {
         id: 2,
-        Titulo: 'Lilo & Stitch',
-        DataLancamento: 'sem data',
-        Descricao: 'Filme Lilo & Stitch',
+        titulo: 'Lilo & Stitch',
+        dataLancamento: '2000-10-20',
+        descricao: 'Filme Lilo & Stitch',
         poster: 'https://d2d7ho1ae66ldi.cloudfront.net/',
     },
     {
         id: 3,
-        Titulo: 'Lilo & Stitch',
-        DataLancamento: 'sem data',
-        Descricao: 'Filme Lilo & Stitch',
+        titulo: 'Lilo & Stitch',
+        dataLancamento: '2000-10-20',
+        descricao: 'Filme Lilo & Stitch',
         poster: 'https://d2d7ho1ae66ldi.cloudfront.net/',
     },
 ];
@@ -81,13 +81,13 @@ const Calendario = () => {
         <Container>
             <Titulo>Calendários de Filmes e Séries Futuras</Titulo>
             <Lista>
-                {futuros.map(({ id, Titulo, DataLancamento, Descricao, poster }) => (
+                {futuros.map(({ id, titulo, dataLancamento, descricao, poster }) => (
                     <ItemLista key={id}>
                         <img src={poster} alt= {titulo} width="300" height="300" />
                         <div>
-                            <TituloFilme>{Titulo}</TituloFilme>
-                            <DataLancamento>Data de Lançamento:{DataLancamento}</DataLancamento>
-                            <Descricao>{Descricao}</Descricao>
+                            <TituloFilme>{titulo}</TituloFilme>
+                            <DataLancamento>Data de Lançamento:{dataLancamento}</DataLancamento>
+                            <Descricao>{descricao}</Descricao>
                         </div>
                     </ItemLista>
                 ))}
