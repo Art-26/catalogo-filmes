@@ -1,24 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+import Login from './paginas/Login';
+import Calendario from './paginas/Calendario';
+import DetalheFilme from './paginas/DetalheFilme';
+import Logo from './componentes/Logo';
+import Cabecalho from './componentes/Cabecalho';
+import CarregadorFonte from './componentes/CarregadorFonte';
+import { ProvedorUsuario } from './contexts/UsuarioContexto';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    background-color: #000000;
+    color: #bfff00;
+    font-family: 'Exile', cursive, sans-serif;
+  }
+
+  a {
+    color: #bfff00;
+    text-decoration: none;
+  }
+
+  button {
+    background-color: #bfff00;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background-color: #99cc00;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <CarregadorFonte />
+    <GlobalStyle />
+    <ProvedorUsuario>
+      <Router>
+        <Logo />
+        <Cabecalho />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/calendario" element={<Calendario />} />
+        </Routes>
+      </Router>
+    </ProvedorUsuario>
+    </>
   );
 }
 
