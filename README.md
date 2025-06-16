@@ -117,4 +117,4 @@ P.S: Para o funcionamento correto da API e das imagens, é necessário conexão 
 
 ---
 
-Este README foi criado para auxiliá-lo(a) à executar o projeto, este projeto foi idealizado por Arthur Bach, Eduardo Procópio, Gabriel Delgobo, Gustavo Borcezi, Hellen Cristine, Luis Gustavo Bolzani e João Vitor Mello.
+Este README foi criado para auxiliá-lo(a) à executar o projeto, este projeto foi idealizado por Arthur Bach, Eduardo Procópio, Gabriel Delgobo, Gustavo Borcezi, Hellen Cristine, Luiz Gustavo Bolzani e João Vitor Mello.
